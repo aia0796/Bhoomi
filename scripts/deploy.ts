@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
   // Compile and deploy the contract
-  const SeedEduToken = await hre.ethers.getContractFactory("SeedEduToken");
+  const SeedEduToken = await hre.ethers.getContractFactory("BhoomiToken");
   const myCustomToken = await SeedEduToken.deploy();
   await myCustomToken.deployed();
 

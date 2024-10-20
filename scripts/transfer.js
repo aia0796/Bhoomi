@@ -6,7 +6,7 @@ dotenv.config();
 
 export async function transfer(donerAddress, recipientAddress, amount) {
   const contractAddress = process.env.CONTRACT_ADDRESS || ""; // Replace with your contract's address
-  const SeedToken = await hre.ethers.getContractFactory("SeedEduToken");
+  const SeedToken = await hre.ethers.getContractFactory("BhoomiToken");
   const seedToken = SeedToken.attach(contractAddress);
 
 //   const tranc = await seedToken.transfer(recipientAddress, amount);

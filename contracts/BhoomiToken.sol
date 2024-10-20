@@ -4,9 +4,9 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract SeedEduToken is ERC20 {
+contract BhoomiToken is ERC20 {
     // Constructor that initializes the ERC20 token with a name and symbol
-    constructor() ERC20("SEEDToken", "BHOOMI") {
+    constructor() ERC20("BHOOMIToken", "BHOOMI") {
         // Mint initial supply of tokens to the contract deployer's address
         // _mint(msg.sender, 1000000 * 10 ** decimals());
     }

@@ -1,11 +1,11 @@
 import hre from "hardhat";
 import * as dotenv from "dotenv";
-import { SeedEduToken } from "../typechain-types";
+import { BhoomiToken } from "../typechain-types";
 import { walletAddress, claimableAmt } from "../receiver"; 
 import { BigNumber } from "ethers";
 dotenv.config();
 
-async function transfer(myCustomToken: SeedEduToken, recipientAddress: string, amount: BigNumber) {
+async function transfer(myCustomToken: BhoomiToken, recipientAddress: string, amount: BigNumber) {
     // Transaction
     const tranc = await myCustomToken.transfer(recipientAddress, amount);
     await tranc.wait();
@@ -16,7 +16,7 @@ async function transfer(myCustomToken: SeedEduToken, recipientAddress: string, a
 async function main() {
   // Connect to the deployed contract using its address
   const contractAddress = process.env.CONTRACT_ADDRESS || ""; // Replace with your contract's address
-  const MyCustomToken = await hre.ethers.getContractFactory("SeedEduToken");
+  const MyCustomToken = await hre.ethers.getContractFactory("BhoomiToken");
   const myCustomToken = MyCustomToken.attach(contractAddress);
 
   // Replace with the address to which you want to mint tokens and the amount
